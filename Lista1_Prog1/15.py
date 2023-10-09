@@ -15,7 +15,7 @@ def busca_binaria_inteiros(lista_inteiros, numero_buscado):
     numero_do_meio = lista_ordenada[fim // 2]
     contador = 0
     while True:
-        if len(lista_ordenada) == 1 and numero_do_meio != numero_buscado:
+        if (len(lista_ordenada) == 1 and numero_do_meio != numero_buscado) or (numero_buscado not in lista_inteiros):
             contador += 1
             return False, contador
 
@@ -35,7 +35,7 @@ def busca_binaria_inteiros(lista_inteiros, numero_buscado):
 
 # 1 5 9 17 33 58 90
 lista = [1, 33, 5, 90, 58, 8, 17]
-#print(busca_binaria_inteiros(lista, 90))
-#print(busca_binaria_inteiros(lista, 1))
+print(busca_binaria_inteiros(lista, 90))
+print(busca_binaria_inteiros(lista, 1))
 print(busca_binaria_inteiros(lista, 9))
-#print(busca_binaria_inteiros(lista, 8))
+print(busca_binaria_inteiros(lista, 8))
