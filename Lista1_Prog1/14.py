@@ -4,7 +4,7 @@ def buscar_linearmente_numero_inteiro_ordenado(lista_inteiros, numero_buscado):
     Se achar o valor, a função retorna True e o número de comparações feitas até encontrar o valor. 
     Caso, contrário, retorna False e o número de comparações feitas até encontrar o valor.
     Argumentos:
-        lista_numeros_inteiros: Uma lista contendo valores inteiros
+        lista_inteiros: Uma lista contendo valores inteiros
         numero_buscado: Valor inteiro que se deseja encontrar na lista
     Saída:
         True (para quando encontrar o valor) ou False (para quando não encontrar o valor)
