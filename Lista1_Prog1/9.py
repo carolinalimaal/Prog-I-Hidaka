@@ -14,4 +14,3 @@ def soma_numeros_reais(lista_float):
 
 lista = [1, 3.29, 2.5, 10, 8.732, 7]
 print(soma_numeros_reais(lista))
-
