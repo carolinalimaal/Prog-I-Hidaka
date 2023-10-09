@@ -1,4 +1,1 @@
-def teste(v):
-    return v * 'a'
-
-teste('casa')
+print('hello world!')
