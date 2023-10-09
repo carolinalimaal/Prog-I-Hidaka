@@ -1,6 +1,6 @@
 def buscar_numero_inteiro_na_lista(lista_numeros_inteiros, numero_buscado):
     """
-    Procura um número inteiro específico numa lista contendo números inteiros. 
+    Busca linearmente um número inteiro específico numa lista contendo números inteiros. 
     Se achar o valor, a função retorna True e o número de comparações feitas até encontrar o valor. 
     Caso, contrário, retorna False e o número de comparações feitas até encontrar o valor.
     Argumentos:
