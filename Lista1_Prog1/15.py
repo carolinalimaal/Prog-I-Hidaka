@@ -11,30 +11,31 @@ def busca_binaria_inteiros(lista_inteiros, numero_buscado):
         contador: Número de comparações até finalizar a busca
     """
     lista_ordenada = sorted(lista_inteiros)
-    inicio = 0
     fim = len(lista_inteiros)-1
-    numero_do_meio = lista_ordenada[(inicio + fim) // 2]
+    numero_do_meio = lista_ordenada[fim // 2]
     contador = 0
     while True:
         if len(lista_ordenada) == 1 and numero_do_meio != numero_buscado:
             contador += 1
             return False, contador
-               
+
         if numero_do_meio > numero_buscado:
             contador += 1
-            inicio = 0
             fim = lista_ordenada.index(numero_do_meio)
-            numero_do_meio = lista_ordenada[:fim]
+            numero_do_meio = lista_ordenada[fim // 2]
 
         elif numero_do_meio < numero_buscado:
             contador += 1
             inicio = lista_ordenada.index(numero_do_meio) + 1
-            fim = 0
-            numero_do_meio = lista_ordenada[inicio:]
+            fim = len(lista_ordenada) - 1
+            numero_do_meio = lista_ordenada[(inicio + fim) // 2]
         else:
             contador += 1
             return True, contador
 
-lista = [1, 33, 5, 3, 90, 58, 8, 17]
-print(busca_binaria_inteiros(lista, 5))
-#1 3 5 8 17 33 58 90
+# 1 5 9 17 33 58 90
+lista = [1, 33, 5, 90, 58, 8, 17]
+#print(busca_binaria_inteiros(lista, 90))
+#print(busca_binaria_inteiros(lista, 1))
+print(busca_binaria_inteiros(lista, 9))
+#print(busca_binaria_inteiros(lista, 8))
