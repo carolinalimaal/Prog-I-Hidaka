@@ -20,4 +20,4 @@ def gerar_aleatorio(quantidade, limite):
 
 lista = gerar_aleatorio(1000, 101)
 print(f'{lista}\n')
-print(verificar_frerquencia_valor(lista, 101))
+print(verificar_frerquencia_valor(lista, 1))
