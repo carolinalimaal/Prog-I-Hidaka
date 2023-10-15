@@ -227,3 +227,11 @@ def verificar_itens_inclusos(lista: list, velocidade: int):
         if soma <= velocidade:
             cont += 1
     return cont
+
+# Contagem 07
+def sortear_convidados(lista_bilhetes: list):
+    cont = 0
+    for item in lista_bilhetes:
+        if item == lista_bilhetes.index(item):
+            cont += 1
+    return cont

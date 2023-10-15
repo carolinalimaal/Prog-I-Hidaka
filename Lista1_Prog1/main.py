@@ -95,5 +95,9 @@ sequencia_bases = ['TACG', 'GAGC', 'ATUC', 'TAGC', 'GAGC']
 print(f.verificar_freq_bases_nitrogenadas(sequencia_bases, 'GAGC'))
 
 # Contagem 06
-lista_complexidade = [5, 3, 4, 7, 10, 2, 3, 13, 25, 1, 1, 8]
-print(f.verificar_itens_inclusos(lista_complexidade, 15))
+lista_complexidade = [5, 3, 4, 7, 10, 2, 1, 13, 25, 1, 1, 8]
+print(f.verificar_itens_inclusos(lista_complexidade, 32))
+
+# Contagem 07
+bilhetes = [3, 2, 5, 4, 8, 6, 7, 10, 12, 13, 11]
+print(f.sortear_convidados(bilhetes))
