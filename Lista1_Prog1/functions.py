@@ -218,3 +218,12 @@ def verificar_freq_bases_nitrogenadas(lista: list, sequencia: str):
         if item == sequencia:
             freq += 1
     return freq
+
+# Contagem 06
+def verificar_itens_inclusos(lista: list, velocidade: int):
+    soma = cont = 0
+    for item in lista:
+        soma += item
+        if soma <= velocidade:
+            cont += 1
+    return cont

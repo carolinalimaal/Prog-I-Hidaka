@@ -90,6 +90,10 @@ print(f.encontrar_maior_altura(alturas))
 numeros = [3, 5, 4, 6, 3, 2, 8, 10]
 print(f.calcular_media_numeros_pares(numeros))
 
-# Contagem 05 
+# Contagem 05
 sequencia_bases = ['TACG', 'GAGC', 'ATUC', 'TAGC', 'GAGC']
 print(f.verificar_freq_bases_nitrogenadas(sequencia_bases, 'GAGC'))
+
+# Contagem 06
+lista_complexidade = [5, 3, 4, 7, 10, 2, 3, 13, 25, 1, 1, 8]
+print(f.verificar_itens_inclusos(lista_complexidade, 15))
