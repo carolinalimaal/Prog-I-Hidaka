@@ -310,3 +310,29 @@ def verificar_numero_par_na_poiscao_par(lista_numeros: list):
         if i % 2 == 0 and lista_numeros[i] % 2 == 0:
             lista_filtrada.append(lista_numeros[i])
     return f'Quantidade de números: {len(lista_filtrada)} \nNúmeros: {lista_filtrada}'
+
+# Contagem 16
+def pesquisar_por_prefixo(lista: list, prefixo: str):
+    lista_filtrada = []
+    for item in lista:
+        if prefixo in item:
+            lista_filtrada.append(item)
+    return lista_filtrada
+
+# Contagem 17
+def verificar_progressao_aritmetica(lista_numeros: list):
+    lista_razoes = []
+    for i in range(len(lista_numeros) - 1):
+        q = lista_numeros[i] - lista_numeros[i+1]
+        lista_razoes.append(q)
+    if len(set(lista_razoes)) == 1:
+        return 'Sim'
+    return 'Não'
+
+# Contagem 18
+def calcular_distancia_hamming(paciente1: list, paciente2: list):
+    cont = 0
+    for x, y in zip(paciente1, paciente2):
+        if x != y:
+            cont += 1
+    return cont

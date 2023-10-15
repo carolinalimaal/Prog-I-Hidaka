@@ -136,3 +136,16 @@ print(f.verificar_clientes_na_faixaEtaria(clientes, idades, [20,30]))
 # Contagem 15
 numeros = [1, 3, 4, 5, 6, 7, 8, 9]
 print(f.verificar_numero_par_na_poiscao_par(numeros))
+
+# Contagem 16
+nomes = ['Amanda', 'Amaral', 'Arnaldo', 'Bruno']
+print(f.pesquisar_por_prefixo(nomes, 'Ama'))
+
+# Contagem 17
+sequencia = [1, 3, 4, 5, 6, 7, 8, 9]
+print(f.verificar_progressao_aritmetica(sequencia))
+
+# Contagem 18
+p1 = [1, 0, 0, 1, 1, 0, 1, 0]
+p2 = [1, 1, 1, 1, 1, 1, 1, 1]
+print(f.calcular_distancia_hamming(p1, p2))
