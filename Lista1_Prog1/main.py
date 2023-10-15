@@ -74,7 +74,7 @@ print(f.verificar_frequencia(lista, 1))
 lista = f.gerar_aleatorio(1000, 20)
 print(f.verificar_freq(lista))
 
-# Contagem 01 
+# Contagem 01
 tamanhos_embalagens = [8,18,4,20,1,12]
 print(f.verificar_tamanho_embalagens(tamanhos_embalagens))
 
@@ -122,3 +122,17 @@ print(f.verificar_validade_produtos(validades, 3))
 cliente = ['Ramon', 'Arnaldo', 'Raquel', 'Pedro', 'Rafael']
 dinheiro = [100, -500, -1, 1500, 90]
 print(f.verificar_saldos_positivos(cliente, dinheiro))
+
+# Contagem 13
+validades = [5, 4, 3, 11, 12, 1]
+produtos = ['AA','AB','BA','BB','CA','AC']
+print(f.verificar_validade_produtos_completo(produtos, validades, 8))
+
+# Contagem 14
+clientes = ['Ramon', 'Arnaldo', 'Raquel', 'Pedro', 'Rafael']
+idades = [23, 45, 27, 60, 45]
+print(f.verificar_clientes_na_faixaEtaria(clientes, idades, [20,30]))
+
+# Contagem 15
+numeros = [1, 3, 4, 5, 6, 7, 8, 9]
+print(f.verificar_numero_par_na_poiscao_par(numeros))

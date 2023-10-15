@@ -287,4 +287,26 @@ def verificar_saldos_positivos(clientes: list, saldos: list):
             lista_filtrada.append(nome)
     return lista_filtrada
 
-# Contagem
+# Contagem 13
+def verificar_validade_produtos_completo(lista_produtos: list, lista_validades: list, mes: int):
+    lista_filtrada = []
+    for produto, validade in zip(lista_produtos, lista_validades):
+        if validade >= mes:
+            lista_filtrada.append([produto, validade])
+    return f'Produtos na validade: {lista_filtrada}'
+
+# Contagem 14
+def verificar_clientes_na_faixaEtaria(lista_clientes: list, lista_idades: list, faixa_etaria: list):
+    lista_filtrada = []
+    for cliente, idade in zip(lista_clientes, lista_idades):
+        if faixa_etaria[0] <= idade <= faixa_etaria[1]:
+            lista_filtrada.append(cliente)
+    return lista_filtrada
+
+# Contagem 15
+def verificar_numero_par_na_poiscao_par(lista_numeros: list):
+    lista_filtrada = []
+    for i in range(len(lista_numeros)):
+        if i % 2 == 0 and lista_numeros[i] % 2 == 0:
+            lista_filtrada.append(lista_numeros[i])
+    return f'Quantidade de números: {len(lista_filtrada)} \nNúmeros: {lista_filtrada}'
