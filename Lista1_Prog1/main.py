@@ -65,3 +65,31 @@ print(f.busca_linear_ordenada(lista_numeros, 1))
 lista_numeros = f.gerar_aleatorio(10, 5)
 print(sorted(lista_numeros))
 print(f.busca_binaria(sorted(lista_numeros), 1))
+
+# Questão 16
+lista = f.gerar_aleatorio(1000, 100)
+print(f.verificar_frequencia(lista, 1))
+
+# Questão 17
+lista = f.gerar_aleatorio(1000, 20)
+print(f.verificar_freq(lista))
+
+# Contagem 01 
+tamanhos_embalagens = [8,18,4,20,1,12]
+print(f.verificar_tamanho_embalagens(tamanhos_embalagens))
+
+# Contagem 02
+notas = [3.5, 6, 7.5, 8, 9, 9, 5, 10, 7.5, 8]
+print(f.verificar_notas_acima_media(notas, 7))
+
+# Contagem 03
+alturas = [1.5, 1.75, 1.67, 1.9, 1.56, 1.89 ]
+print(f.encontrar_maior_altura(alturas))
+
+# Contagem 04
+numeros = [3, 5, 4, 6, 3, 2, 8, 10]
+print(f.calcular_media_numeros_pares(numeros))
+
+# Contagem 05 
+sequencia_bases = ['TACG', 'GAGC', 'ATUC', 'TAGC', 'GAGC']
+print(f.verificar_freq_bases_nitrogenadas(sequencia_bases, 'GAGC'))

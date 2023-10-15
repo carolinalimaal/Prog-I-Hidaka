@@ -118,7 +118,7 @@ def calcular_desvio_padrão(lista: list):
 # Questão 13
 import random as r
 def gerar_aleatorio(quantidade: int, limite: int):
-    return [r.randint(0, limite) for _ in range(quantidade)]
+    return [r.randint(1, limite) for _ in range(quantidade)]
 
 def busca_linear(lista: list, valor: int):
     comparacoes = 0
@@ -140,8 +140,8 @@ def busca_linear_ordenada(lista: list, valor: int):
 
 # Questão 15
 def busca_binaria(lista: list, valor:int):
-    comparacoes = 0 
-    I = 0 
+    comparacoes = 0
+    I = 0
     F = len(lista) - 1
     M = (I + F) // 2
     while I <= F:
@@ -157,3 +157,64 @@ def busca_binaria(lista: list, valor:int):
             I = M + 1
             M = (I + F) // 2
     return False, comparacoes
+
+# Questão 16 
+def verificar_frequencia(lista: list, valor: int):
+    freq = 0
+    for item in lista:
+        if item == valor:
+            freq += 1
+    return freq
+
+# Questão 17
+def verificar_freq(lista: list):
+    dic_freq = {1 : 0, 2 : 0,
+                3 : 0, 4 : 0,
+                5 : 0, 6 : 0,
+                7 : 0, 8 : 0,
+                9 : 0, 10: 0,
+                11: 0, 12: 0,
+                13: 0, 14: 0,
+                15: 0, 16: 0,
+                17: 0, 18: 0,
+                19: 0, 20: 0}
+    for item in lista:
+        dic_freq[item] += 1
+    return dic_freq
+
+# Contagem 01
+def verificar_tamanho_embalagens(lista_tamanhos: list):
+    cont = 0
+    for item in lista_tamanhos:
+        if item < 7:
+            cont += 1
+    return cont
+
+# Contagem 02
+def verificar_notas_acima_media(lista_notas: list, media: float):
+    cont = 0
+    for item in lista_notas:
+        if item > media:
+            cont += 1
+    return cont
+
+# Contagem 03
+def encontrar_maior_altura(lista_alturas: list):
+    return max(lista_alturas)
+
+# Contagem 04
+def calcular_media_numeros_pares(lista_numeros: list):
+    soma = cont = 0 
+    for item in lista_numeros:
+        if item % 2 == 0:
+            soma += item
+            cont += 1
+    return soma / cont
+
+# Contagem 05
+def verificar_freq_bases_nitrogenadas(lista: list, sequencia: str):
+    freq = 0
+    for item in lista:
+        if item == sequencia:
+            freq += 1
+    return freq
