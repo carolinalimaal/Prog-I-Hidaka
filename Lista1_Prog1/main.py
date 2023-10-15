@@ -113,3 +113,12 @@ print(f.classificar_nivel_seguranca(vulnerabilidades))
 # Contagem 10
 nomes = ['Ramon', 'Arnaldo', 'Raquel', 'Pedro', 'Rafael']
 print(f.filtrar_nomes(nomes))
+
+# Contagem 11
+validades = [2, 3, 4, 7, 1, 2, 1, 3]
+print(f.verificar_validade_produtos(validades, 3))
+
+# Contagem 12
+cliente = ['Ramon', 'Arnaldo', 'Raquel', 'Pedro', 'Rafael']
+dinheiro = [100, -500, -1, 1500, 90]
+print(f.verificar_saldos_positivos(cliente, dinheiro))

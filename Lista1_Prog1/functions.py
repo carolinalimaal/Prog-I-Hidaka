@@ -270,3 +270,21 @@ def filtrar_nomes(lista_nomes: list):
         if nome[0] in 'Rr':
             lista_filtrada.append(nome)
     return lista_filtrada
+
+# Contagem 11
+def verificar_validade_produtos(lista_validades: list, mes: int):
+    lista_filtrada = []
+    for item in lista_validades:
+        if item >= mes:
+            lista_filtrada.append(item)
+    return lista_filtrada
+
+# Contagem 12
+def verificar_saldos_positivos(clientes: list, saldos: list):
+    lista_filtrada = []
+    for nome, saldo in zip(clientes, saldos):
+        if saldo > 0:
+            lista_filtrada.append(nome)
+    return lista_filtrada
+
+# Contagem
