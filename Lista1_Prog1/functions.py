@@ -232,6 +232,41 @@ def verificar_itens_inclusos(lista: list, velocidade: int):
 def sortear_convidados(lista_bilhetes: list):
     cont = 0
     for item in lista_bilhetes:
-        if item == lista_bilhetes.index(item):
+        if item == (lista_bilhetes.index(item) + 1):
             cont += 1
     return cont
+
+# Contagem 08
+def organizar_conceitos(lista_conceitos: list):
+    dic_conceitos = {'E': 0,
+                     'B': 0,
+                     'R': 0,
+                     'I': 0}
+    for item in lista_conceitos:
+        dic_conceitos[item] += 1
+    return dic_conceitos
+
+# Contagem 09
+def classificar_nivel_seguranca(lista_vulnerabilidades: list):
+    dic_classificacao = {'Muito seguro': 0,
+                       'Quase seguro': 0,
+                       'Inseguro': 0,
+                       'Muito inseguro': 0}
+    for item in lista_vulnerabilidades:
+        if item == 0:
+            dic_classificacao['Muito seguro'] += 1
+        elif 1 <= item <= 3:
+            dic_classificacao['Quase seguro'] += 1
+        elif 4 <= item <= 5:
+            dic_classificacao['Inseguro'] += 1
+        else:
+            dic_classificacao['Muito inseguro'] += 1
+    return dic_classificacao
+
+# Contagem 10
+def filtrar_nomes(lista_nomes: list):
+    lista_filtrada = []
+    for nome in lista_nomes:
+        if nome[0] in 'Rr':
+            lista_filtrada.append(nome)
+    return lista_filtrada

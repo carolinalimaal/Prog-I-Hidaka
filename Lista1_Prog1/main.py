@@ -101,3 +101,15 @@ print(f.verificar_itens_inclusos(lista_complexidade, 32))
 # Contagem 07
 bilhetes = [3, 2, 5, 4, 8, 6, 7, 10, 12, 13, 11]
 print(f.sortear_convidados(bilhetes))
+
+# Contagem 08
+conceitos = ['E','E','B','B','R','E','B','R','I','I','R','R','I']
+print(f.organizar_conceitos(conceitos))
+
+# Contagem 09
+vulnerabilidades = [1, 5, 6, 7, 3, 2, 2, 1, 0, 0, 0, 0]
+print(f.classificar_nivel_seguranca(vulnerabilidades))
+
+# Contagem 10
+nomes = ['Ramon', 'Arnaldo', 'Raquel', 'Pedro', 'Rafael']
+print(f.filtrar_nomes(nomes))
