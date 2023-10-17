@@ -5,6 +5,9 @@ def concatenar_elementos(lista1: list, lista2: list):
         lista_concatenada.append(x + y)
     return lista_concatenada
 
+def concatenar_elementos_v2(lista1, lista2):
+    return [x + y for x,y in zip(lista1, lista2)]
+
 # Questão 02
 def encontrar_primo(numero: int):
     for divisor in range(2, numero):
@@ -29,6 +32,9 @@ def filtrar_strings_por_tamanho(lista_strings: list):
             lista_filtrada.append(item)
     return lista_filtrada
 
+def filtrar_strings_por_tamanho_v2(lista_strings: list):
+    return [item for item in lista_strings if len(item) < 10]
+
 # Questão 04
 def filtrar_por_tipo(lista: list, tipo: type):
     lista_filtrada = []
@@ -43,6 +49,9 @@ def filtrar_listas_hetereogenas(lista: list):
         lista_map.append(filtrar_por_tipo(sublista, int))
     return lista_map
 
+def filtrar_listas_hetereogenas_v2(lista: list):
+    return [filtrar_por_tipo(sublista, int) for sublista in lista]
+
 # Questão 05
 def filtrar_strings(lista_strings: list, lista_inteiros: list):
     lista_filtrada = []
@@ -50,6 +59,11 @@ def filtrar_strings(lista_strings: list, lista_inteiros: list):
         if len(string) <= inteiro:
             lista_filtrada.append(string)
     return lista_filtrada
+
+def filtrar_strings_v2(lista_strings: list, lista_inteiros: list):
+    return [string\
+            for string, inteiro in zip(lista_strings, lista_inteiros)\
+            if len(string) <= inteiro]
 
 # Questão 06
 def filtrar_sublistas(lista: list):
@@ -59,6 +73,11 @@ def filtrar_sublistas(lista: list):
             lista_filtrada.append(lista[idx])
     return lista_filtrada
 
+def filtrar_sublistas_v2(lista: list):
+    return [lista[idx]\
+             for idx in range(len(lista) - 1)\
+                  if sum(lista[idx]) > sum(lista[idx + 1])]
+  
 # Questão 07
 def encontrar_menor_soma(lista1: list, lista2: list, lista3: list):
     menor = lista1[0] + lista2[0] + lista3[0]
@@ -158,7 +177,7 @@ def busca_binaria(lista: list, valor:int):
             M = (I + F) // 2
     return False, comparacoes
 
-# Questão 16 
+# Questão 16
 def verificar_frequencia(lista: list, valor: int):
     freq = 0
     for item in lista:
@@ -204,7 +223,7 @@ def encontrar_maior_altura(lista_alturas: list):
 
 # Contagem 04
 def calcular_media_numeros_pares(lista_numeros: list):
-    soma = cont = 0 
+    soma = cont = 0
     for item in lista_numeros:
         if item % 2 == 0:
             soma += item
@@ -271,6 +290,11 @@ def filtrar_nomes(lista_nomes: list):
             lista_filtrada.append(nome)
     return lista_filtrada
 
+def filtrar_nomes_v2(lista_nomes: list):
+    return [nome\
+            for nome in lista_nomes\
+                if nome[0] in 'Rr']
+
 # Contagem 11
 def verificar_validade_produtos(lista_validades: list, mes: int):
     lista_filtrada = []
@@ -278,6 +302,9 @@ def verificar_validade_produtos(lista_validades: list, mes: int):
         if item >= mes:
             lista_filtrada.append(item)
     return lista_filtrada
+
+def verificar_validade_produtos_v2(lista_validades: list, mes: int):
+    return [item for item in lista_validades if item >= mes]
 
 # Contagem 12
 def verificar_saldos_positivos(clientes: list, saldos: list):
@@ -287,6 +314,9 @@ def verificar_saldos_positivos(clientes: list, saldos: list):
             lista_filtrada.append(nome)
     return lista_filtrada
 
+def verificar_saldos_positivos_v2(clientes: list, saldos: list):
+    return [nome for nome, saldo in zip(clientes, saldos) if saldo > 0]
+
 # Contagem 13
 def verificar_validade_produtos_completo(lista_produtos: list, lista_validades: list, mes: int):
     lista_filtrada = []
@@ -294,6 +324,11 @@ def verificar_validade_produtos_completo(lista_produtos: list, lista_validades: 
         if validade >= mes:
             lista_filtrada.append([produto, validade])
     return f'Produtos na validade: {lista_filtrada}'
+
+def verificar_validade_produtos_completo_v2(lista_produtos: list, lista_validades: list, mes: int):
+    return [[produto, validade]\
+             for produto, validade in zip(lista_produtos, lista_validades)\
+                  if validade >= mes]
 
 # Contagem 14
 def verificar_clientes_na_faixaEtaria(lista_clientes: list, lista_idades: list, faixa_etaria: list):
@@ -303,6 +338,11 @@ def verificar_clientes_na_faixaEtaria(lista_clientes: list, lista_idades: list, 
             lista_filtrada.append(cliente)
     return lista_filtrada
 
+def verificar_clientes_na_faixaEtaria_v2(lista_clientes: list, lista_idades: list, faixa_etaria: list):
+    return [cliente\
+             for cliente, idade in zip(lista_clientes, lista_idades)\
+                  if faixa_etaria[0] <= idade <= faixa_etaria[1]]
+
 # Contagem 15
 def verificar_numero_par_na_poiscao_par(lista_numeros: list):
     lista_filtrada = []
@@ -311,6 +351,11 @@ def verificar_numero_par_na_poiscao_par(lista_numeros: list):
             lista_filtrada.append(lista_numeros[i])
     return f'Quantidade de números: {len(lista_filtrada)} \nNúmeros: {lista_filtrada}'
 
+def verificar_numero_par_na_poiscao_par_v2(lista_numeros: list):
+    return [lista_numeros[i]\
+             for i in range(len(lista_numeros))\
+                  if i % 2 == 0 and lista_numeros[i] % 2 == 0]
+
 # Contagem 16
 def pesquisar_por_prefixo(lista: list, prefixo: str):
     lista_filtrada = []
@@ -318,6 +363,9 @@ def pesquisar_por_prefixo(lista: list, prefixo: str):
         if prefixo in item:
             lista_filtrada.append(item)
     return lista_filtrada
+
+def pesquisar_por_prefixo_v2(lista: list, prefixo: str):
+    return [item for item in lista if prefixo in item]
 
 # Contagem 17
 def verificar_progressao_aritmetica(lista_numeros: list):
