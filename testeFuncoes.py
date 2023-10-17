@@ -72,4 +72,3 @@ print(f.criar_lista_numeros_iguais_correspondentes(lista_original))
 
 strings = ['Bianca', 'Paula', 'Iago', 'Carolina', 'Mariana']
 print(f.achar_maior_string(strings))
-
